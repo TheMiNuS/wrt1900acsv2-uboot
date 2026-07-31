@@ -1,4 +1,4 @@
-# U-Boot v7 for Linksys WRT1900ACS v2 Rev.A00
+# U-Boot v2026.07 for Linksys WRT1900ACS v2 Rev.A00
 
 A reproducible community port of **Das U-Boot v2026.07** for the
 **Linksys WRT1900ACS v2, hardware revision Rev.A00**, code name **Shelby**.
