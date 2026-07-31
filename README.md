@@ -220,13 +220,10 @@ See [docs/OPENWRT.md](docs/OPENWRT.md).
 - [Reproducible build](docs/BUILD.md)
 - [Complete flashing procedure](docs/FLASHING-PROCEDURE.md)
 - [Concise installation guide](docs/INSTALLATION.md)
-- [Functional validation](docs/VALIDATION.md)
 - [Network and switch mapping](docs/NETWORK-MAPPING.md)
 - [Command reference](docs/COMMANDS.md)
 - [Recovery](docs/RECOVERY.md)
 - [OpenWrt integration](docs/OPENWRT.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md)
-- [Git publishing](docs/GIT-PUBLISHING.md)
 
 ## Publishing a release
 
