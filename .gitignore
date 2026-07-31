@@ -1,0 +1,9 @@
+/wrt1900acsv2-uboot-full/
+/dist/
+/build-*.log
+__pycache__/
+*.pyc
+*.kwb
+*.sha256
+.idea/
+.vscode/

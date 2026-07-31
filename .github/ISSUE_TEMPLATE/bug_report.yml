@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a build, boot, network, or hardware issue
+title: "[BUG] "
+labels: [bug]
+body:
+  - type: checkboxes
+    attributes:
+      label: Verified target
+      options:
+        - label: My device is a Linksys WRT1900ACS v2 Rev.A00.
+          required: true
+        - label: I have working 3.3 V serial access and verified backups.
+          required: true
+        - label: I tested the image with kwboot before any NAND write.
+          required: true
+  - type: input
+    attributes:
+      label: Repository commit
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Image SHA-256
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Sanitized serial log
+      description: Remove MAC addresses, serial numbers, certificates, and devinfo contents.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true

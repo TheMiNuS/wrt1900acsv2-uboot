@@ -1,0 +1,17 @@
+--- a/net/mdio-uclass.c
++++ b/net/mdio-uclass.c
+@@ -13,6 +13,14 @@
+ 	ofnode_for_each_subnode(phy_node, mdio_node) {
+ 		node_name = ofnode_get_name(phy_node);
+ 		dev_dbg(mdio_dev, "* Found child node: '%s'\n", node_name);
++
++		/* A DSA switch is not a Clause 22/45 PHY. */
++		if (ofnode_device_is_compatible(phy_node, "marvell,mv88e6085")) {
++			dev_dbg(mdio_dev,
++				"  - skipping DSA switch node during generic PHY binding\n");
++			continue;
++		}
++
+ 		ret = device_bind_driver_to_node(mdio_dev,
+ 						 "eth_phy_generic_drv",
+ 						 node_name, phy_node, &phy_dev);

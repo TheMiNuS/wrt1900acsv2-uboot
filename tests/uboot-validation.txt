@@ -1,0 +1,36 @@
+# Read-only checks first
+version
+linksys status
+printenv bootcmd altbootcmd boot_part boot_part_ready upgrade_available bootcount bootlimit
+printenv ethaddr eth1addr eth2addr eth3addr eth4addr eth5addr eth6addr
+nand info
+nand bad
+mtd list
+net list
+mdio list
+dm tree
+pinmux status -a
+i2c bus
+i2c probe
+usb start
+scsi scan
+mmc list
+button list
+linksys buttons
+
+# Network checks; configure serverip and a TFTP server first
+ping ${serverip}
+tftpboot ${loadaddr} test.bin
+crc32 ${loadaddr} ${filesize}
+
+# Firmware-slot checks; each command boots immediately
+linksys slot 1
+linksys boot
+linksys slot 2
+linksys boot
+
+# Safe bootloader-image validation; does not write NAND
+load usb 0:1 ${loadaddr} /${ubootName}
+linksys uboot check ${loadaddr} ${filesize}
+
+# Destructive commands are intentionally omitted. Follow docs/INSTALLATION.md.

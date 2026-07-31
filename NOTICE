@@ -1,0 +1,13 @@
+WRT1900ACS v2 U-Boot build kit
+Copyright (C) 2026 The_MiNuS
+
+This repository is licensed under GPL-2.0-or-later.
+
+The build downloads Das U-Boot from its upstream repository. U-Boot and all
+imported upstream files retain their original copyright and licensing terms.
+No Linksys firmware binary, calibration data, devinfo contents, serial number,
+MAC address or other device-unique data is distributed by this repository.
+
+Linksys and WRT are trademarks of their respective owners. This is an
+independent community project and is not affiliated with or endorsed by
+Linksys, Marvell, OpenWrt or the Das U-Boot project.

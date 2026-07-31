@@ -1,0 +1,3 @@
+* text=auto eol=lf
+*.kwb binary
+patches/*.patch -whitespace
